@@ -116,7 +116,7 @@ a {
 
 #courses {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(0, 1fr));
+    grid-template-columns: 1fr;
 
 
     gap: 1rem;
