@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    background-color: #f5ebe0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+header img {
+    box-shadow: 0 0 2px black;
+    max-width: 75px;
+}
+
+h1,
+h2,
+header,
+footer {
+    padding: 1rem;
+}
+
+header,
+footer,
+#certificate a,
+h2 {
+    background-color: #c9ada7;
+}
+
+/*nav menu*/
+.show {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: none;
+    background-color: #b6938b
+}
+
+nav a {
+    width: 100%;
+}
+
+nav a:hover,
+#certificate a:hover {
+    background-color: #d6ccc2;
+}
+
+#menu {
+    font-weight: 500;
+    font-size: 2rem;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu.show::before {
+    content: "x";
+}
+
+.active::after {
+    content: " 📌";
+}
+
+/* main */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+}
+
+section {
+    flex: 1 1 auto;
+    margin: 0 2rem;
+    padding-bottom: 1rem;
+    background-color: #e3d5ca;
+    border: 1px solid #d6ccc2;
+    box-shadow: 0 0 2px #7b7670;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+#location img {
+    box-shadow: 0 0 4px black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: .5rem;
+}
+
+#options {
+    margin: 1rem auto;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+}
+
+#courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.course,
+#certificate a {
+    padding: .5rem 2rem;
+    border: 1px solid black;
+    border-radius: .2rem;
+}
+
+/* footer */
+footer {
+    line-height: 1.5lh;
+}
+
+/* large view */
+@media only screen and (min-width: 750px) {
+    main {
+        display: grid;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    nav,
+    .show {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #course-work {
+        grid-column: 1/2;
+        margin-right: 0;
+    }
+
+    #location {
+        grid-column: 2/3;
+        margin-left: 0;
+    }
+
+    #certificate {
+        grid-column: 1/3;
+    }
+}
