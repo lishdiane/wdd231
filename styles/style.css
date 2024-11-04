@@ -116,7 +116,7 @@ a {
 
 #courses {
     display: grid;
-    grid-template-columns: repeat(auto-fill minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(0, 1fr));
 
 
     gap: 1rem;
@@ -171,5 +171,6 @@ footer {
     }
 
     #courses {
-        grid-template-columns: repeat(3, 1fr);    }
+        grid-template-columns: repeat(3, 1fr);   
+    }
 }
