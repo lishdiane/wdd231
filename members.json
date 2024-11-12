@@ -1,0 +1,18 @@
+{
+    "familyName": "Lish",
+    "dateMovedIn": "01/01/2011",
+    "recordsNumber": 6,
+    "visited": true,
+    "familyMembers": [
+        {
+        "name": "Tyler Lish",
+        "gender": "Male",
+        "birthdate": "12/19/1985"
+        },
+        {
+        "name": "Diane Lish",
+        "gender": "Female",
+        "birthdate": "09/12/1990" 
+        }
+    ]
+}   
