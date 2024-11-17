@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directory Pocatello Chamber of Commerce</title>
+  <meta name="description" content="Directory Pocatello Chamber of Commerce">
+  <meta name="author" content="Diane Lish">
+
+  <meta property="og:title" content="Pocatello Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="https://lishdiane.github.io/wdd231/chamber/directory.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="images/favicon.ico">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <script defer src="scripts/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="images/logo.webp" alt="Pocatello Chamber of Commerce Logo" width="150" height="150">
+    <div class="heading">
+      <h1>POCATELLO</h1>
+      <h2>CHAMBER OF COMMERCE</h2>
+    </div>
+    <a class="menu" href="#" aria-label="menu icon"></a>
+  </header>
+
+  <nav>
+    <ul class="navigation">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Discover</a></li>
+      <li class="active"><a href="#">Business Directory</a></li>
+      <li><a href="#">Join</a></li>
+    </ul>
+  </nav>
+  
+
+  <main>   
+    <div class="hero">
+      
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width: 600px)">
+        <source srcset="images/hero-med.webp" media="(min-width: 400px)">
+        <img class="hero-img" src="images/hero-small.webp" alt="Buisiness woman standing in front of shop." width="600" height="174">
+      </picture>
+
+      <div class="hero-card">
+        <h2>Business Directory</h2>
+        <p>Search for a business</p>
+
+        <div class="search">
+          <input type="text" id="search" aria-label="search">
+          <label><button type=button id="search-button"><img src="images/magnifying-glass.svg" alt="Magnifying glass" width="31" height="31"></button></label>
+        </div>
+      </div>
+    </div>
+
+    <div hidden class="message">Business not found</div>
+
+    <div class="options">
+      <button class="list-view" aria-label="list view">&#8788;</button>
+      <button class="grid-view" aria-label="grid view">&#8862;</button>
+    </div>
+
+    <div class="business-cards"></div>
+  </main>
+
+  <footer>
+    <div>
+      <p><strong>Pocatello Chamber of Commerce</strong></p>
+      <p>1234 Main Street</p>
+      <p>Pocatello, Id 83201</p>
+      <p>info@pcc.org</p>
+      <p>(208) 555-1234</p>
+    </div>
+
+    <div class="social-media">
+      <a href=""><img src="images/youtube-logo.svg" alt="Youtube logo" width="30" height="30"></a>
+      <a href=""><img src="images/twitter-logo.svg" alt="Twitter logo" width="30" height="30"></a>
+      <a href=""><img src="images/linkedin-logo.svg" alt="Linked In logo" width="30" height="30"></a>
+    </div>
+
+    <div>
+      <p>WDD231 Class Project</p>
+      <p>🌷 Diane Lish | United States</p>
+      <p>©<span id="currentYear"></span> Pocatello Chamber of Commerce</p>
+      <p>Last Modified <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

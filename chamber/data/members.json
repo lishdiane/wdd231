@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Denny's Wrecker Service",
+        "address": "Pocatello, ID 83201",
+        "phone_numbers": "(208)237-0671",
+        "url": "https://dennyservice.net/",
+        "image": "images/dennys-logo.webp",
+        "membership_level": 2
+    },
+    {
+        "name": "Alpine Animal Hospital",
+        "address": "293 E Linden Ave Chubbuck, ID 83202",
+        "phone_numbers": "(208)237-1111",
+        "url": "http://alpineanimal.net/",
+        "image": "images/alpine-logo.webp",
+        "membership_level": 3
+    },
+    {
+        "name": "Nels Bi Lo Food Market",
+        "address": "333 N 15th Ave Pocatello, ID 83201",
+        "phone_numbers": "(208)232-5739",
+        "url": "https://nelsbilo.com/",
+        "image": "images/nelsbilomarket-logo.webp",
+        "membership_level": 4
+    },
+    {
+        "name": "Big Foot Pizza",
+        "address": "168 Jefferson Ave Pocatello, ID 83201",
+        "phone_numbers": "(208)233-1041",
+        "url": "http://www.bigfootpizzapocatello.com/",
+        "image": "images/bigfootpizza-logo.webp",
+        "membership_level": 3
+    },
+    {
+        "name": "Flowers By L D",
+        "address": "715 N Main St Pocatello, ID 83204",
+        "phone_numbers": "(208)232-5476",
+        "url": "http://flowersbyld.florist/",
+        "image": "images/flowersbyld-logo.webp",
+        "membership_level": 2
+    },
+    {
+        "name": "Pocatello Art Center",
+        "address": "444 N Main St Pocatello, ID 83201",
+        "phone_numbers": "(208)-232-0970",
+        "url": "https://www.pocatelloartcenter.org/",
+        "image": "images/artcenter-logo.webp",
+        "membership_level": 3
+    },
+    {
+        "name": "Donut Bros",
+        "address": "401 N. Arthur Pocatello, ID 83201",
+        "phone_numbers": "(208)-530-0997",
+        "url": "https://thedonutbros.com",
+        "image": "images/donutbros-logo.webp",
+        "membership_level": 4
+    }
+]
