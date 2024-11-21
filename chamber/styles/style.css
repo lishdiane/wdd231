@@ -231,6 +231,7 @@ a {
 
 .card a {
     padding: 0;
+    word-break: break-all;
 }
 
 .card img {
@@ -313,6 +314,10 @@ footer {
         flex-direction: row;
         justify-content: right;
         padding-top: .5rem;
+    }
+
+    nav a {
+        flex: 1;
     }
 
     .menu {
