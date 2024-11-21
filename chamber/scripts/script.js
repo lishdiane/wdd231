@@ -10,6 +10,7 @@ modified.innerHTML = document.lastModified;
 
 
 //-----hamburger menu-----//
+
 const button = document.querySelector(".menu");
 const nav = document.querySelector(".navigation");
 
@@ -19,6 +20,7 @@ button.addEventListener("click", () => {
 });
 
 //-----Create business cards-----//
+
 let results = null;
 
 getBusinesses();
@@ -48,68 +50,50 @@ function createBusinessCards(array) {
     document.querySelector(".business-cards").innerHTML = business.join("");
 }
 
+//-----Weather-----//
 
-//-----List/grid view-----//
+const currentWeather = document.querySelector(".current-weather");
+const forcast = document.querySelector(".forcast")
 
-const listButton = document.querySelector(".list-view");
-const gridButton = document.querySelector(".grid-view");
-const businessCards = document.querySelector(".business-cards");
+const url = "https://api.openweathermap.org/data/2.5/weather?lat=42.86&lon=112.45&appid=c6f08ca845cd7ee8b38b3f5b7128987a&units=imperial";
+const forcastUrl = "https://api.openweathermap.org/data/2.5/forecast/daily?lat=42.86&lon=112.45&cnt=3&appid=c6f08ca845cd7ee8b38b3f5b7128987&units=imperial";
 
-listButton.addEventListener("click", () => {
-    businessCards.classList.add("list");
-});
+apiFetch();
 
-gridButton.addEventListener("click", () => {
-    businessCards.classList.remove("list");
-});
-
-//-----Search-----//
-
-const searchButton = document.querySelector("#search-button");
-const input = document.querySelector("#search");
-const message = document.querySelector(".message");
-let filteredArray = [];
-
-input.addEventListener("keyup", () => {
-    let value = input.value;
-    filteredArray = [];
-    filterList(value);
-});
-
-function filterList(searchValue) {
-    const lowerValue = searchValue.toLowerCase();
-
-    if (lowerValue !== "") {
-        results.forEach(element => {
-            
-            let lowerName = element.name.toLowerCase();
-
-            if (lowerName.startsWith(lowerValue)) {
-                filteredArray = results.filter(item => {
-                    lowerName = item.name.toLowerCase();
-                    return lowerName.startsWith(lowerValue);
-                });
-            };
-
-            createBusinessCards(filteredArray);
-
-            if (filteredArray.length == 0) {
-                createBusinessCards(results);
-            };
-
-            searchButton.addEventListener("click", () => {
-                if (filteredArray.length == 0) {
-                    message.hidden = false;
-                    input.value = "";
-                } else {
-                    createBusinessCards(filteredArray);
-                };
-            });
-        });
-
-    } else {
-        createBusinessCards(results);
-    }
+async function apiFetch() {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            console.table(data);
+            displayResults(data);
+        } else {
+            throw Error(await response.text());
+        };
+    } catch(error) {
+        console.log(error);
+    };
 };
 
-input.addEventListener("focus", () => message.hidden = true);
+
+function displayResults(data) {
+   currentWeather.innerHTML = createCurrentWeatherTemplate(data);
+};   
+
+function createCurrentWeatherTemplate(data) {
+    return `<img src="https://openweathermap.org/img/wn/10n@2x.png" alt="${data.weather[0].description}">
+    <p><strong>${data.main.temp}</strong>&deg;F</p>
+    <p>${data.weather[0].description}</p>
+    <p>High:${data.main.temp_max}&deg</p>
+    <p>Low:${data.main.temp_min}&deg</p>
+    <p>Humidity:${data.main.humidity}%</p>
+    <p>Sunrise:${data.sys.sunrise}</p>
+    <p>Sunset:${data.sys.sunset}</p>`
+};
+
+function createForcastTemplate() {
+    return`<p></p>
+    <p></p>
+    <p></p>`
+};
+

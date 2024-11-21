@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Directory Pocatello Chamber of Commerce</title>
-  <meta name="description" content="Directory Pocatello Chamber of Commerce">
+  <title>Pocatello Chamber of Commerce Home</title>
+  <meta name="description" content="Home Pocatello Chamber of Commerce">
   <meta name="author" content="Diane Lish">
 
   <meta property="og:title" content="Pocatello Chamber of Commerce">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/logo.webp">
-  <meta property="og:url" content="https://lishdiane.github.io/wdd231/chamber/directory.html">
+  <meta property="og:url" content="https://lishdiane.github.io/wdd231/chamber/index.html">
   <meta name="twitter:card" content="summary">
 
   <link rel="stylesheet" href="styles/style.css">
@@ -38,7 +38,7 @@
     <ul class="navigation">
       <li><a href="#">Home</a></li>
       <li><a href="#">Discover</a></li>
-      <li class="active"><a href="#">Business Directory</a></li>
+      <li class="active"><a href="directory.html">Business Directory</a></li>
       <li><a href="#">Join</a></li>
     </ul>
   </nav>
@@ -48,30 +48,56 @@
     <div class="hero">
       
       <picture>
-        <source srcset="images/hero-large.webp" media="(min-width: 600px)">
-        <source srcset="images/hero-med.webp" media="(min-width: 400px)">
-        <img class="hero-img" src="images/pocatello-hero.webp" alt="Buisiness woman standing in front of shop." width="600" height="174">
+        <source srcset="images/pocatello-hero-large.webp" media="(min-width: 600px)">
+        <source srcset="images/pocatello-hero-med.webp" media="(min-width: 400px)">
+        <img class="hero-img" src="images/pocatello-hero-small.webp" alt="Buisiness woman standing in front of shop." width="600" height="174">
       </picture>
 
-      <div class="hero-card">
-        <h2>Business Directory</h2>
-        <p>Search for a business</p>
-
-        <div class="search">
-          <input type="text" id="search" aria-label="search">
-          <label><button type=button id="search-button"><img src="images/magnifying-glass.svg" alt="Magnifying glass" width="31" height="31"></button></label>
-        </div>
+      <div class="hero-card call-to-action">
+        <a href="join.html">Join our Chamber of Commerce</a>
       </div>
     </div>
 
-    <div hidden class="message">Business not found</div>
+    <h2 class="home-heading">Home</h2>
 
-    <div class="options">
-      <button class="list-view" aria-label="list view">&#8788;</button>
-      <button class="grid-view" aria-label="grid view">&#8862;</button>
+    <div id="home-info">
+        <section class="events">
+            <h3>Events</h3>
+                <div class="list">
+                <div class="card">
+                    <h4>Festival of Trees</h4>
+                    <p>Nov 20 - Nov 23</p>
+                    <p>Stephens Performing Arts Center, 1002 Sam Nixon Dr</p>
+                </div>
+                <div class="card">
+                    <h4>Open Mic Event</h4>
+                    <p>Nov 20 @ 6:00pm</p>
+                    <p>Station Square, 200 S Main St</p>
+                </div>
+                <div class="card">
+                    <h4>Night Lights Parade</h4>
+                    <p>Nov 29 @ 6:30pm</p>
+                    <p>Downtown Pocatello</p>
+                </div>
+                <div class="card">
+                    <h4>Santa & Reindeer</h4>
+                    <p>Nov 30 @ 11:00am</p>
+                    <p>Lookout Point</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h3>Current Weather</h3>
+            <div class="current-weather"></div>
+        </section>
+
+        <section>
+            <h3>Weather Forcast</h3>
+            <div class="forcast"></div>
+        </section>
     </div>
-
-    <div class="business-cards"></div>
+    <div class="business-cards spotlight"></div>
   </main>
 
   <footer>

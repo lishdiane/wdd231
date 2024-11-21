@@ -20,7 +20,8 @@ p {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: var(--headingfont);
 }
 
@@ -78,7 +79,8 @@ nav ul {
 }
 
 nav a:hover,
-.card a:hover {
+.card a:hover,
+.hero .call-to-action:hover {
     background-color: #3d5a80;
     color: #f6fefeca;
 }
@@ -91,6 +93,11 @@ a {
 }
 
 /* main */
+
+.hero {
+    position: relative;
+}
+
 
 .hero-img {
     width: 100%;
@@ -111,6 +118,23 @@ a {
     padding: .5rem;
 }
 
+.hero .call-to-action {
+    display: block;
+    position: absolute;
+    right: 2%;
+    bottom: 5%;
+    font-size: smaller;
+    padding: 0;
+    max-width: 200px;
+    border-radius: .5rem;
+    border: 1px solid #98c1d9bd;
+}
+
+.call-to-action a {
+    color: #f6fefeca;
+    padding: .5rem;
+}
+
 .search {
     display: flex;
     padding-top: .5rem;
@@ -121,6 +145,42 @@ a {
 .search input {
     height: 40px;
     width: 75%;
+}
+
+/* Home info section */
+
+#home-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 1rem 3rem;
+}
+
+.home-heading {
+    margin: .5rem 3rem;
+    font-size: 2rem;
+}
+
+#home-info section {
+    background-color:#e5e6ea;
+    border: 1.5px solid #29324162;
+
+    h3 {
+        padding: .5rem 1rem;
+        font-size: 1.5rem;
+        background-color:#293241;
+        color: #f9f9f9d8;
+        font-weight: 200;
+    }
+}
+
+/* events */
+
+.events .list .card {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: .5rem 1rem;
+    background-color: transparent;
+    box-shadow: 0 0 1px var(--color1);
 }
 
 /* error message */
@@ -201,7 +261,7 @@ a {
     word-break: break-all;
 }
 
-.list section:nth-child(even) {
+.list section:nth-child(even){
     background-color: #98c1d9b0;
 }
 
@@ -272,7 +332,6 @@ footer {
 
     .hero {
         margin-top: 2rem;
-        position: relative;
     }
 
     .hero-img {
@@ -294,6 +353,20 @@ footer {
 
     .hero-card p {
         font-size: 1.5vw;
+    }
+
+    .hero .call-to-action {
+        top: auto;
+        left: auto;
+        height: auto;
+        font-size: 100%;
+        max-width: fit-content;
+    }
+
+    #home-info {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 2rem;
     }
 
     .social-media img {
