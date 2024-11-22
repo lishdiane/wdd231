@@ -12,6 +12,36 @@ gridButton.addEventListener("click", () => {
     businessCards.classList.remove("list");
 });
 
+//----- create businesses cards-----//
+let results = null
+
+getBusinesses();
+
+async function getBusinesses() {
+    const response = await fetch("data/members.json");
+    if (response.ok) {
+        const data = await response.json();
+        results = data;
+        createBusinessCards(data);
+    }
+}
+
+function cardTemplate(business) {
+    return `<section class="card">
+        <img loading="lazy" src="${business.image}" alt="${business.name} image" width="200" height="200">
+        <p>${business.name}</p>
+        <p>${business.address}</p>
+        <p>${business.phone_numbers}</p>
+        <p><a href="${business.url}">${business.url}</a></p>
+    </section>`
+}
+
+
+function createBusinessCards(array) {
+    const business = array.map((item) => cardTemplate(item))
+    document.querySelector(".business-cards").innerHTML = business.join("");
+}
+
 //-----Search-----//
 
 const searchButton = document.querySelector("#search-button");
