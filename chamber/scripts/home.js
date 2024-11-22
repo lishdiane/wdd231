@@ -33,11 +33,17 @@ function cardSpotlightTemplate(business) {
 
 function createMembershipStatus(business) {
     if (business.membership_level == 3) {
-        return `<p style="color: grey;">SILVER</p>
-        <p style="color: grey;">&#9733 &#9733 &#9733`
+        return `<div style="background-color: silver; border: 1px solid grey;">
+        <p>SILVER</p>
+        <p>Membership</p>
+        <p>&#9733 &#9733 &#9733</p>
+        </div>`
     } else if (business.membership_level == 4){
-        return `<p style="color: gold;">GOLD</p>
-        <p style="color: gold;">&#9733 &#9733 &#9733 &#9733`
+        return `<div style="background-color: #FFCA4E; border: 1px solid #B37D01; color: #664801;">
+        <p>GOLD</p>
+        <p>Membership</p>
+        <p>&#9733&#9733&#9733&#9733</p>
+        </div>`
     }
 }
 

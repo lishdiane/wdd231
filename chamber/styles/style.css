@@ -166,18 +166,25 @@ a {
     background-color:#e5e6ea;
     border: 1.5px solid #29324162;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+
     h3 {
         padding: .5rem 1rem;
         font-size: 1.5rem;
         background-color:#293241;
         color: #f9f9f9d8;
         font-weight: 200;
-
+        width: 100%;
     }
 }
 
 /* events */
+
+.events {
+    overflow-y: auto;
+    max-height: 330px;
+    min-width:min-content
+}
 
 .events .list .card {
     grid-template-columns: 1fr 1fr 1fr;
@@ -197,6 +204,7 @@ a {
     align-items: center;
     background-color: var(--color2);
     padding: .5rem;
+    height: 100%;
 }
 
 .weather-description {
@@ -206,7 +214,9 @@ a {
 .forcast {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
+    
 }
 
 .forcast .forcast-card {
@@ -214,8 +224,14 @@ a {
     justify-content: center;
     align-items: center;
     background-color: var(--color2);
-    width: 100%;
     box-shadow: 0 0 2px #293241;
+    padding: .5rem;
+}
+
+.forcast-card img, .current-weather img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
 }
 
 /* business cards */
@@ -252,6 +268,9 @@ a {
 
 /* spotlight businesses */
 .spotlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     margin: 3rem 3rem;
     padding: 0;
 }
@@ -262,7 +281,7 @@ a {
 }
 
 .spotlight h4 {
-    padding: 1rem;
+    padding: .5rem;
     font-size: 15px;
 }
 .spotlight .card > div{
@@ -273,9 +292,13 @@ a {
    text-align: left;
    padding: .5rem;
    font-size: 12.8px;
+   flex: 1;
+   
 }
+
 .spotlight .card > div:nth-child(2) {
     border-top: 1px solid var(--color5);
+    flex: 2;
 }
 
 .spotlight .card img {
@@ -287,8 +310,13 @@ a {
 .spotlight .membership {
     text-align: center;
     font-weight: 500;
-    letter-spacing: .1rem;
-    text-shadow: 0 0 1px black;
+    letter-spacing: .05rem;
+    font-size: 8px;
+}
+
+.spotlight .membership div {
+    border-radius: 50%;
+    padding: .8rem .1rem;
 }
 
 
@@ -347,8 +375,8 @@ a {
 /* Footer */
 
 footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
     gap: 1rem;
     padding: 1rem;
     font-size: .8rem;
@@ -384,7 +412,7 @@ footer {
 
 /* large screen */
 
-@media only screen and (min-width: 715px) {
+@media only screen and (min-width: 740px) {
 
     .navigation,
     .navigation.show {
@@ -394,8 +422,10 @@ footer {
         padding-top: .5rem;
     }
 
-    nav a {
+    nav li {
         flex: 1;
+        max-width: 170px;
+        text-align: center;
     }
 
     .menu {
@@ -467,5 +497,9 @@ footer {
 
     .social-media img {
         width: 50px;
+    }
+
+    .spotlight {
+        flex-direction: row;
     }
 }
