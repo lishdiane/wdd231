@@ -38,7 +38,7 @@ function createMembershipStatus(business) {
         <p>Membership</p>
         <p>&#9733 &#9733 &#9733</p>
         </div>`
-    } else if (business.membership_level == 4){
+    } else if (business.membership_level == 4) {
         return `<div style="background-color: #FFCA4E; border: 1px solid #B37D01; color: #664801;">
         <p>GOLD</p>
         <p>Membership</p>
@@ -85,7 +85,7 @@ async function apiFetch(url) {
             data = await response.json();
 
             if (url == currentUrl) {
-            displayResults(data);
+                displayResults(data);
 
             } else if (url == forcastUrl) {
                 createForcastCards(data)
@@ -93,14 +93,14 @@ async function apiFetch(url) {
         } else {
             throw Error(await response.text());
         };
-    } catch(error) {
+    } catch (error) {
         console.log(error);
     };
 };
 
 function displayResults(data) {
-   currentWeather.innerHTML = createCurrentWeatherTemplate(data);
-};   
+    currentWeather.innerHTML = createCurrentWeatherTemplate(data);
+};
 
 function createCurrentWeatherTemplate(data) {
 
@@ -139,7 +139,7 @@ function createForcastCards(data) {
             description: dayOneForcast[5].weather[0].description,
             icon: dayOneForcast[5].weather[0].icon
         },
-          
+
         {
             date: dayTwoForcastDate,
             temp: dayTwoHigh,
@@ -152,14 +152,14 @@ function createForcastCards(data) {
             temp: dayThreeHigh,
             description: dayThreeForcast[5].weather[0].description,
             icon: dayThreeForcast[5].weather[0].icon
-        }   
+        }
     ];
-    
+
     forcast.innerHTML = forcasts.map((day) => createForcastTemplate(day.date, day.temp, day.description, day.icon)).join("");
 }
 
 function createForcastTemplate(date, temp, description, icon) {
-    return`<section class="forcast-card">
+    return `<section class="forcast-card">
     <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}" width="100" height="100">
     <div>
     <h4>${date}</h4>
@@ -183,7 +183,7 @@ function getFullDate(dt) {
 }
 
 function calculateForcastHigh(array) {
-    
+
     let high = 0;
     for (let i = 0; i < array.length; i++) {
         const temp = array[i].main.temp;
@@ -206,8 +206,8 @@ function filterArray(array, futureDate) {
         const itemDay = new Date(item.dt_txt);
         const itemDate = itemDay.getDate();
         if (itemDate == futureDate) {
-            return item; 
-        };      
+            return item;
+        };
     });
     return filteredArray;
 }
