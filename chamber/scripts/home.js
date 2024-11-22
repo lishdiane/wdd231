@@ -1,6 +1,7 @@
 //-----Create business cards for spotlight-----//
 getFilteredBusinesses();
 
+
 async function getFilteredBusinesses() {
     const response = await fetch("data/members.json");
     if (response.ok) {
@@ -13,7 +14,10 @@ async function getFilteredBusinesses() {
 function cardSpotlightTemplate(business) {
     return `
         <section class="card">
-            <h4>${business.name}</h4>
+            <div>
+                <h4>${business.name}</h4>
+                <div class='membership'>${createMembershipStatus(business)}</div>
+            </div>
             <div>
                 <div>
                     <img loading="lazy" src="${business.image}" alt="${business.name} image" width="100" height="100">
@@ -25,6 +29,16 @@ function cardSpotlightTemplate(business) {
                 </div>
             </div>
         </section>`
+}
+
+function createMembershipStatus(business) {
+    if (business.membership_level == 3) {
+        return `<p style="color: grey;">SILVER</p>
+        <p style="color: grey;">&#9733 &#9733 &#9733`
+    } else if (business.membership_level == 4){
+        return `<p style="color: gold;">GOLD</p>
+        <p style="color: gold;">&#9733 &#9733 &#9733 &#9733`
+    }
 }
 
 
@@ -44,8 +58,6 @@ function createSpotlightBusinessCards(array) {
 
     const business = businesses.map((item) => cardSpotlightTemplate(item))
     document.querySelector(".spotlight").innerHTML = business.join("");
-    
-
 }
 
 //-----Weather-----//
