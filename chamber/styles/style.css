@@ -168,7 +168,7 @@ a {
     flex-direction: column;
 }
 
-#-home-info>section h3 {
+#home-info > section h3 {
     padding: .5rem 1rem;
     font-size: 1.5rem;
     background-color: #293241;
