@@ -55,12 +55,12 @@
                     <h3>Membership Application Form</h3>
                     <p><span class="required">*</span> Indicates a required field.</p>
 
-                    <label><div>First name<span class="required">*</span></div>
+                    <label>First name<span class="required">*</span>
                         <input type="text" name="firstname" autocomplete="given-name" title="Enter your first name."
                             required>
                     </label>
 
-                    <label><div>Last name<span class="required">*</span></div>
+                    <label>Last name<span class="required">*</span>
                         <input type="text" name="lastname" autocomplete="family-name" title="Enter you last name." required>
                     </label>
 
@@ -69,21 +69,21 @@
                             title="Enter your title. May include letters, hyphens, or spaces and must be at least 7 characters" pattern="[A-Za-z\s\-]{7,}">
                     </label>
 
-                    <label><div>Email<span class="required">*</span></div>
+                    <label>Email<span class="required">*</span>
                         <input type="email" name="email" autocomplete="email" title="Enter a valid email."
                             placeholder="johndoe@email.com" required>
                     </label>
 
-                    <label><div>Phone<span class="required">*</span></div>
+                    <label>Phone<span class="required">*</span>
                         <input type="tel" name="phone" autocomplete="tel"
                             title="Enter a phone number complete with area code." required>
                     </label>
 
-                    <label><div>Business/organization name<span class="required">*</span></div>
+                    <label>Business/organization name<span class="required">*</span>
                         <input type="text" name="organization-name" autocomplete="organization" title="Enter the name of your business/organization." required>
                     </label>
 
-                    <label><div>Membership level<span class="required">*</span></div>
+                    <label>Membership level<span class="required">*</span>
                         <select name="membership" title="Select a membership level." required>
                             <option value="" selected disabled>Choose One</option>
                             <option value="np">NP Membership</option>
@@ -97,7 +97,7 @@
                         <textarea name="description" rows="3" title="Enter a description of your business/organization." placeholder="Enter a description of your business/organization."></textarea>
                     </label>
                     
-                    <input type="hidden" name="timestamp" id="timestamp" step="1">
+                    <input type="hidden" name="timestamp" id="timestamp">
 
                     <button aria-label="join" type="submit" id="submit" name="submit">Join</button>
                 </form>
