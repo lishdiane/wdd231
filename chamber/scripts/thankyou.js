@@ -7,7 +7,6 @@ const thankyou = document.querySelector("#thankyou");
 thankyou.innerHTML = `
 <p>Thank you for applying! Some one will be in contact.</p>
 <p><strong>Name:</strong> ${capitalize(show("firstname"))} ${capitalize(show("lastname"))}</p>
-<p><strong>Title:</strong> ${capitalize(show("title"))}</p>
 <p><strong>Your Phone:</strong> ${capitalize(show("phone"))}</p>
 <p><strong>Your Email:</strong><a href="mailto:${show("email")}"> ${show("email")}</a></p>
 <p><strong>Business/Organization:</strong> ${capitalize(show("organization-name"))}</p>
