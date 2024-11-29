@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocatello Chamber of Commerce Join</title>
+    <meta name="description" content="Join the Pocatello Chamber of Commerce">
+    <meta name="author" content="Diane Lish">
+
+    <meta property="og:title" content="Pocatello Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/logo.webp">
+    <meta property="og:url" content="https://lishdiane.github.io/wdd231/chamber/join.html">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/join.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.webp" alt="Pocatello Chamber of Commerce Logo" width="150" height="150">
+        <div class="heading">
+            <h1>POCATELLO</h1>
+            <h2>CHAMBER OF COMMERCE</h2>
+        </div>
+        <a class="menu" href="#" aria-label="menu icon"></a>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Business Directory</a></li>
+            <li class="active"><a href="#">Join</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <div= id="join">
+            <h2>Join our Chamber of Commerce</h2>
+
+            <section class="form">
+                <form method="get" action="thankyou.html">
+                    <h3>Membership Application Form</h3>
+                    <p><span class="required">*</span> Indicates a required field.</p>
+
+                    <label><div>First name<span class="required">*</span></div>
+                        <input type="text" name="firstname" autocomplete="given-name" title="Enter your first name."
+                            required>
+                    </label>
+
+                    <label><div>Last name<span class="required">*</span></div>
+                        <input type="text" name="lastname" autocomplete="family-name" title="Enter you last name." required>
+                    </label>
+
+                    <label>Title
+                        <input type="text" name="title" autocomplete="organization-title"
+                            title="Must be a letter, hyphen, or space and at least 7 characters" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+
+                    <label><div>Email<span class="required">*</span></div>
+                        <input type="email" name="email" autocomplete="email" title="Must be a valid email."
+                            placeholder="johndoe@email.com" required>
+                    </label>
+
+                    <label><div>Phone<span class="required">*</span></div>
+                        <input type="tel" name="phone" autocomplete="tel"
+                            title="Must be phone number complete with area code." required>
+                    </label>
+
+                    <label><div>Business/organization name<span class="required">*</span></div>
+                        <input type="text" name="organization-name" autocomplete="organization" required>
+                    </label>
+
+                    <label><div>Membership level<span class="required">*</span></div>
+                        <select name="memebership" required>
+                            <option value="" selected disabled>Choose One</option>
+                            <option value="np">NP Membership</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label>Description
+                        <input type="text" name="description" rows="3" title placeholder="Enter a description of your business/organization.">
+                    </label>
+                    
+                    <input aria-label="timestamp" type="hidden" name="timestamp" id="timestamp" step="1">
+
+                    <button aria-label="join" type="submit" id="submit">Join</button>
+                </form>
+            </section>
+
+            <section id="membership-cards">
+                <h3>Membership Levels</h3>
+            </section>
+            <dialog id="membership-details"></dialog>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <p><strong>Pocatello Chamber of Commerce</strong></p>
+            <p>1234 Main Street</p>
+            <p>Pocatello, Id 83201</p>
+            <p>info@pcc.org</p>
+            <p>(208) 555-1234</p>
+        </div>
+
+        <div class="social-media">
+            <a href="https://www.youtube.com/"><img src="images/youtube-logo.svg" alt="Youtube logo" width="30"
+                    height="30"></a>
+            <a href="https://x.com/"><img src="images/twitter-logo.svg" alt="Twitter logo" width="30" height="30"></a>
+            <a href="https://www.linkedin.com/"><img src="images/linkedin-logo.svg" alt="Linked In logo" width="30"
+                    height="30"></a>
+        </div>
+
+        <div>
+            <p>WDD231 Class Project</p>
+            <p>🌷 Diane Lish | United States</p>
+            <p>©<span id="currentYear"></span> Pocatello Chamber of Commerce</p>
+            <p>Last Modified <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

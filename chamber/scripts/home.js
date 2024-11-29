@@ -88,7 +88,9 @@ async function apiFetch(url) {
                 displayResults(data);
 
             } else if (url == forcastUrl) {
+                console.log(data);
                 createForcastCards(data)
+              
             }
         } else {
             throw Error(await response.text());

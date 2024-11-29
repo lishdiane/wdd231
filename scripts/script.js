@@ -96,10 +96,11 @@ const courses = [
         completed: false
     }
 ]
-
-const credits = document.querySelector("#credits");
+const courseDetails = document.querySelector("#course-details");
+const credits = document.querySelector("#credits"); 
 
 addCourseContent(courses);
+
 credits.innerHTML = `${calculateCompletedCredits(courses)}/${calculateTotalCredits(courses)}`
 
 //filter courses on button click//
@@ -121,6 +122,10 @@ document.querySelector("#wdd").addEventListener("click", () => {
 
 });
 
+// modal close//
+
+
+
 
 //-----Functions-----//
 
@@ -138,16 +143,61 @@ function calculateTotalCredits(array) {
 }
 
 function addCourseContent(array) {
-    //adds course template to HTML//
-    const courseArray = array.map(createCourseTemplate);
-    document.querySelector("#courses").innerHTML = courseArray.join("");
-}
+    const coursesElement = document.querySelector("#courses");
+    coursesElement.innerHTML = "";
 
-function createCourseTemplate(course) {
-    //creates course HTML template and sets color depending on completed or not//
-    if (course.completed == true) {
-        return `<div class="course" style="background-color: #b6938b;">${course.subject} ${course.number}</div>`;
-    } else {
-        return `<div class="course">${course.subject} ${course.number}</div>`;
-    }
+    array.forEach((item) => {
+        const courseDiv = document.createElement("div");
+        
+        courseDiv.classList.add("course");
+
+        if (item.completed == true) {
+            courseDiv.classList.add("complete");
+        };
+
+        courseDiv.innerHTML = `${item.subject} ${item.number}`;
+        courseDiv.addEventListener("click", () => {
+            displayCourseDetails(item);
+        });
+
+        coursesElement.appendChild(courseDiv);
+    });
+
+    document.querySelectorAll(".complete").forEach((item) => item.style.backgroundColor = "#b6938b");
+}
+    //adds course template to HTML//
+    // const courseArray = array.map((course) => {
+    //     if (course.completed == true) {
+    //         `<a href="#!"><div class="course complete" >${course.subject} ${course.number}</div></a>`;
+    //     } else {
+    //         `<a href="#!"><div class="course">${course.subject} ${course.number}</div></a>`;
+    //     }
+    //     document.querySelector(".course").addEventListener("click", () => {
+    //         displayCourseDetails(course)
+    //     });
+    // });
+    // document.querySelector("#courses").innerHTML = courseArray.join("");
+
+
+// function createCourseTemplate(course) {
+//     //creates course HTML template and sets class if completed //
+//     if (course.completed == true) {
+//         return `<a href="#!"><div class="course complete" >${course.subject} ${course.number}</div></a>`;
+//     } else {
+//         return `<a href="#!"><div class="course">${course.subject} ${course.number}</div></a>`;
+//     }
+// }
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = "";
+    courseDetails.innerHTML = `<h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p>${course.description}</p>
+        <p><strong>Credits:</strong> ${course.credits}</p>
+        <p><strong>Certificate:</strong> ${course.certificate}</p>
+        <p><strong>Technologies:</strong> ${course.technology}</p>
+        <button id="closeButton">Close</button>`;
+    courseDetails.showModal();
+    closeButton.addEventListener("click", () =>
+        courseDetails.close());
 }

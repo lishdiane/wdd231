@@ -79,7 +79,8 @@ nav ul {
 
 nav a:hover,
 .card a:hover,
-.hero .call-to-action:hover {
+.hero .call-to-action:hover,
+form button:hover {
     background-color: #3d5a80;
     color: #f6fefeca;
 }
@@ -144,6 +145,13 @@ a {
 .search input {
     height: 40px;
     width: 75%;
+}
+
+#join h2 {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color:#3D5A80;
 }
 
 /* Home info section */
@@ -294,7 +302,6 @@ a {
     padding: .5rem;
     font-size: 12.8px;
     flex: 1;
-
 }
 
 .spotlight .card>div:nth-child(2) {
@@ -320,7 +327,205 @@ a {
     padding: .8rem .1rem;
 }
 
+/* form */
+form {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 80%;
+    background-color:#293241;
+    color: #f9f9f9d8
+}
 
+form h3 {
+    text-align: center;
+    padding-bottom: 1rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+form p {
+    text-align: right;
+    font-size: smaller;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    padding-top: .5rem;
+}
+
+form input, form select{
+    height: 40px;
+    padding-left: .5rem;
+}
+
+.required {
+    color: rgb(255, 109, 109);
+}
+
+form button {
+    width: 70%;
+    margin: 5% 15%;
+    height: 40px;
+}
+
+/* membership cards */
+#membership-cards {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+#membership-cards .card {
+    margin-bottom: 1rem;
+    border: 1px solid #293241;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.788);
+    z-index: 1;
+}
+
+#membership-cards h3{
+    font-size: 1.5rem;
+}
+
+#membership-cards h3, #membership-cards h4 {
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+}
+
+.bronze {
+    background-color: #ba8651;
+}
+
+.silver {
+    background-color: #dcdcdc;
+}
+
+.gold {
+    background-color: #ffd900;
+}
+
+
+/* membership animation */
+
+#membership-cards .shine {
+    position: relative;
+    overflow: hidden;
+}
+
+#membership-cards .shine::before {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 254, 242, 0.55) 50%, rgba(255, 255, 255, 0) 100% );
+    content: "";
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    width: 20%;
+    left: -50%;
+    top: 0;
+    position: absolute;
+    transform: skewX(-25deg);
+    animation: shine 2s;
+    z-index: 2;
+}
+
+#membership-cards .shine::after {
+    content: "\2734";
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    overflow: visible;
+    animation: star .5s ease-in-out both;
+}
+
+@keyframes shine {
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes star {
+
+    0% {
+        opacity: 0;   
+    }
+
+    25% {
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(2);
+    }
+
+    75% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+#membership-cards .np::before {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffffd3 50%, rgba(255, 255, 255, 0) 100% );
+}
+
+#membership-cards .np::after {
+    animation-delay: 1s;
+}
+
+#membership-cards .bronze::before {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffd7af96 50%, rgba(255, 255, 255, 0) 100% );
+    animation-delay: 2s;
+}
+
+#membership-cards .bronze::after {
+    animation-delay: 3s;
+}
+
+#membership-cards .silver::before {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fffefead 50%, rgba(255, 255, 255, 0) 100% );
+    animation-delay: 4s;
+}
+
+#membership-cards .silver::after {
+    animation-delay: 5s;
+}
+
+#membership-cards .gold::before {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fff6c1b8 50%, rgba(255, 255, 255, 0) 100% );
+    animation-delay: 6s;
+}
+
+#membership-cards .gold::after {
+    animation-delay: 7s;
+}
+
+
+/* modal dialog box */
+dialog {
+    margin: auto auto;
+    width: 40%;
+}
+
+dialog::backdrop {
+    background-color: rgba(240, 248, 255, 0.567);
+}
+
+dialog p {
+    padding: .5rem;
+    text-align: left;
+}
+
+dialog button {
+    width: 40%;
+    margin: 1rem 30%;
+}
 
 /* view buttons */
 
@@ -371,6 +576,32 @@ a {
     text-align: center;
     padding: 1rem;
     background-color: var(--color4);
+}
+
+/* thank you page */
+#thankyou {
+    background-color: #e0fbfcb9;
+    margin: 2rem;
+    border:1px solid #3d5a80;
+}
+
+#thankyou p:first-child {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#thankyou p {
+    padding: 1rem;
+}
+
+#thankyou a {
+    display: inline;
+    padding: 0;
+}
+
+#thankyou a:hover {
+    text-decoration: underline;
+    color:#3D5A80
 }
 
 /* Footer */
@@ -502,5 +733,22 @@ footer {
 
     .spotlight {
         flex-direction: row;
+    }
+
+    #join {
+        display: grid;
+    }
+
+    #join h2 {
+        grid-template-columns: 1/2;
+        padding: 2rem;
+    }
+
+    #membership-cards {
+        grid-column: 2/3;
+    }
+
+    #join .form {
+        grid-column: 1/2;
     }
 }
