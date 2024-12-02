@@ -1,0 +1,35 @@
+:root {
+    --color1: #335c67;
+    --color2: #FFF3B0;
+    --color3: #E09F3E;
+    --color4: #9E2A2B;
+    --color5: #540B0E;
+    --font1: "Galada", cursive;
+    --font2: "Roboto", serif;
+}
+
+.color1 {
+    background-color: var(--color1);
+    color: white;
+}
+.color2 {
+    background-color: var(--color2);
+}
+.color3 {
+    background-color: var(--color3);
+}
+.color4 {
+    background-color: var(--color4);
+    color: white;
+}
+.color5 {
+    background-color: var(--color5);
+    color: white;
+}
+
+.galada {
+    font-family: var(--font1);
+}
+.roboto {
+    font-family: var(--font2);
+}
