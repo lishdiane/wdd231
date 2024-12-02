@@ -657,7 +657,9 @@ dialog button {
 
 #discover-page .discover-info img {
     margin: 1rem auto;
-    border: 1px solid var(--color5)
+    border: 1px solid var(--color5);
+    max-width: 90%;
+    height: auto;
 }
 
 #discover-page .discover-images {
@@ -670,12 +672,6 @@ dialog button {
 .discover-info .visit a {
     font-size: 1.2rem;
     padding: 1rem;
-}
-
-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
 }
 
 /* Footer */
