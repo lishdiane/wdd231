@@ -151,7 +151,7 @@ a {
     text-align: center;
     padding: 1rem;
     font-size: 1.7rem;
-    color:#3D5A80;
+    color: #3D5A80;
 }
 
 /* Home info section */
@@ -176,7 +176,7 @@ a {
     flex-direction: column;
 }
 
-#home-info > section h3 {
+#home-info>section h3 {
     padding: .5rem 1rem;
     font-size: 1.5rem;
     background-color: #293241;
@@ -332,7 +332,7 @@ form {
     padding: 2rem;
     margin: 0 auto;
     max-width: 80%;
-    background-color:#293241;
+    background-color: #293241;
     color: #f9f9f9d8
 }
 
@@ -361,7 +361,9 @@ form span {
 }
 
 
-form input, form select, form textarea{
+form input,
+form select,
+form textarea {
     height: 40px;
     padding-left: .5rem;
     grid-row: 2/3;
@@ -391,11 +393,12 @@ form button {
     z-index: 1;
 }
 
-#membership-cards h3{
+#membership-cards h3 {
     font-size: 1.5rem;
 }
 
-#membership-cards h3, #membership-cards h4 {
+#membership-cards h3,
+#membership-cards h4 {
     font-weight: 600;
     text-align: center;
     padding: 1rem;
@@ -422,7 +425,7 @@ form button {
 }
 
 #membership-cards .shine::before {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 254, 242, 0.55) 50%, rgba(255, 255, 255, 0) 100% );
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 254, 242, 0.55) 50%, rgba(255, 255, 255, 0) 100%);
     content: "";
     position: relative;
     overflow: hidden;
@@ -442,7 +445,7 @@ form button {
     color: rgb(255, 255, 255);
     font-size: 20px;
     position: absolute;
-    top:10px;
+    top: 10px;
     right: 10px;
     overflow: visible;
     animation: star .5s ease-in-out both;
@@ -458,7 +461,7 @@ form button {
 @keyframes star {
 
     0% {
-        opacity: 0;   
+        opacity: 0;
     }
 
     25% {
@@ -481,7 +484,7 @@ form button {
 }
 
 #membership-cards .np::before {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffffd3 50%, rgba(255, 255, 255, 0) 100% );
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffffd3 50%, rgba(255, 255, 255, 0) 100%);
 }
 
 #membership-cards .np::after {
@@ -489,7 +492,7 @@ form button {
 }
 
 #membership-cards .bronze::before {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffd7af96 50%, rgba(255, 255, 255, 0) 100% );
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffd7af96 50%, rgba(255, 255, 255, 0) 100%);
     animation-delay: 2s;
 }
 
@@ -498,7 +501,7 @@ form button {
 }
 
 #membership-cards .silver::before {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fffefead 50%, rgba(255, 255, 255, 0) 100% );
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fffefead 50%, rgba(255, 255, 255, 0) 100%);
     animation-delay: 4s;
 }
 
@@ -507,7 +510,7 @@ form button {
 }
 
 #membership-cards .gold::before {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fff6c1b8 50%, rgba(255, 255, 255, 0) 100% );
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fff6c1b8 50%, rgba(255, 255, 255, 0) 100%);
     animation-delay: 6s;
 }
 
@@ -591,7 +594,7 @@ dialog button {
 #thankyou {
     background-color: #e0fbfcb9;
     margin: 2rem;
-    border:1px solid #3d5a80;
+    border: 1px solid #3d5a80;
 }
 
 #thankyou p:first-child {
@@ -608,9 +611,10 @@ dialog button {
     padding: 0;
 }
 
-#thankyou a:hover, .discover-info section a:hover {
+#thankyou a:hover,
+.discover-info section a:hover {
     text-decoration: underline;
-    color:#3D5A80
+    color: #3D5A80
 }
 
 /* discover page */
@@ -621,7 +625,8 @@ dialog button {
     margin: 1rem auto;
 }
 
-#discover-page h2, #discover-page h3 {
+#discover-page h2,
+#discover-page h3 {
     text-align: center;
     color: var(--color1);
     padding-bottom: 1rem;
@@ -631,7 +636,7 @@ dialog button {
     font-size: 1.5rem;
 }
 
- #discover-page .discover-info {
+#discover-page .discover-info {
     margin: 0;
     max-width: 100%;
     display: flex;
@@ -643,7 +648,8 @@ dialog button {
     padding: 1rem;
 }
 
-.discover-info section a, .discover-info .visit a {
+.discover-info section a,
+.discover-info .visit a {
     font-size: 1.2rem;
     padding: 1rem;
     text-align: center;
@@ -661,7 +667,7 @@ dialog button {
     margin: 1rem auto;
 }
 
-.discover-info .visit a{
+.discover-info .visit a {
     font-size: 1.2rem;
     padding: 1rem;
 }
@@ -833,7 +839,8 @@ footer {
         grid-column: 2/3;
     }
 
-    #discover-page h2, #discover-page h3 {
+    #discover-page h2,
+    #discover-page h3 {
         padding: 2rem;
     }
 
