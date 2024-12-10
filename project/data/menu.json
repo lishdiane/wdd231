@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Loaded French Fries",
+        "description": "Home style fried covered in melted cheese, bacon, secret sauce, and topped with green onions.",
+        "calories": "600",
+        "price": "10.99",
+        "img": "images/appetizer-menu.webp",
+        "category": "appetizer"
+    },
+    {
+        "name": "Hummas Platter",
+        "description": "A bowl of hummus served with freshly made tortilla chips.",
+        "calories": "650",
+        "price": "9.99",
+        "img": "images/hummus.webp",
+        "category": "appetizer"
+    },
+    {
+        "name": "Edamame",
+        "description": "Salted edamame cooked to perfection.",
+        "calories": "120",
+        "price": "5.99",
+        "img": "images/edamame.webp",
+        "category": "appetizer"
+    },
+    {
+        "name": "Cheese Burger",
+        "description": "1/4lb angus beef patty, lettuce, tomatoe, onion, and cheddar cheese on a brioche bun. Served with our homestyle french fries.",
+        "calories": "1200",
+        "price": "16.99",
+        "img": "images/burger.webp",
+        "category": "entree"
+    },
+    {
+        "name": "Crab Rangoon Penne",
+        "description": "Penne pasta in a creamy sauce with crab, spinach, and topped with parmesean cheese.",
+        "calories": "1100",
+        "price": "18.99",
+        "img": "images/dinner-menu.webp",
+        "category": "entree"
+    },
+    {
+        "name": "Steak",
+        "description": "Tri-tip steak cooked to your liking, served with roasted vegetables.",
+        "calories": "550",
+        "price": "21.99",
+        "img": "images/steak.webp",
+        "category": "entree"
+    },
+    {
+        "name": "Roast Beef on Rye",
+        "description": "Roast beefs sandwhich with lettuce, shredded carrots, provalone cheese, and bacon jam, all on our made in house rye bread.",
+        "calories": "550",
+        "price": "10.99",
+        "img": "images/lunch-menu.webp",
+        "category": "lunch"
+    },
+    {
+        "name": "Sushi",
+        "description": "Your choice of sushi roll.",
+        "calories": "250",
+        "price": "9.99",
+        "img": "images/sushi.webp",
+        "category": "lunch"
+    },
+    {
+        "name": "Side Salad",
+        "description": "Fresh salad greens toppend with tomatos, your choice of protein, and your choice of dressing.",
+        "calories": "400-600",
+        "price": "7.99",
+        "img": "images/sides-menu.webp",
+        "category": "side"
+    },
+    {
+        "name": "Homestyle French Fries",
+        "description": "Fresh cut french fries served with your choice of dipping sauces.",
+        "calories": "450",
+        "price": "7.99",
+        "img": "images/fries.webp",
+        "category": "side"
+    },
+    {
+        "name": "Sunrise",
+        "description": "Sparkling mango and mint.",
+        "calories": "250",
+        "price": "3.99",
+        "img": "images/drinks-menu.webp",
+        "category": "drink"
+    },
+    {
+        "name": "Citrus Surprise",
+        "description": "Orange lemon thyme and cranberry infused",
+        "calories": "250",
+        "price": "3.99",
+        "img": "images/citrus.webp",
+        "category": "drink"
+    },
+    {
+        "name": "Orange Spiced Cider",
+        "description": "Orange spiced cider with hints of cinnamon, clove, and anise.",
+        "calories": "250",
+        "price": "3.99",
+        "img": "images/cider.webp",
+        "category": "drink"
+    },
+    {
+        "name": "Ice Cream Parfait",
+        "description": "Layers of strawberries and our homemade vanilla bean ice cream.",
+        "calories": "350",
+        "price": "4.99",
+        "img": "images/dessert-menu.webp",
+        "category": "dessert"
+    },
+    {
+        "name": "Chocolate Cake",
+        "description": "Chocolate cake layered with chocolate mousse and topped with rasberry compote.",
+        "calories": "550",
+        "price": "7.99",
+        "img": "images/cake.webp",
+        "category": "dessert"
+    }
+]

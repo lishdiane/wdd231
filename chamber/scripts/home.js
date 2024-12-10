@@ -167,14 +167,14 @@ function createForcastTemplate(date, temp, description, icon) {
     <h4>${date}</h4>
     <p class="weather-description">${description}</p>
     <p>High: ${temp}&deg;F</p>
-    <div>
+    </div>
     </section>`
 };
 
 function getFullDate(dt) {
     const day = new Date(dt);
     const options = {
-        weeekday: "long",
+        weekday: "long",
         year: "numeric",
         month: "long",
         day: "numeric",

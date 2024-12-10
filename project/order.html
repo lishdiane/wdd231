@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | A Place to Eat</title>
+    <meta name="description" content="A Place to Eat restaurant menu">
+    <meta name="author" content="Diane Lish">
+
+    <meta property="og:title" content="A Place to Eat">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://lishdiane.github.io/wdd231/project/menu.html">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Galada&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+        <script defer src="scripts/script.js"></script>
+        <script defer src="scripts/order.js"></script>
+</head>
+
+<body id="menu-body">
+    <header>
+        <img src="images/logo.webp" alt="A Place to Eat logo" width="100" height="100">
+        <div id="menu-icons">
+            <a class="menu" href="#" aria-label="menu icon"></a>
+            <div>
+                <a class="shopping-bag menu" href="#" aria-label="shopping bag"><img src="images/bag.webp"
+                    alt="shopping bag icon" width="258" height="334"></a>
+                <div id="item-number"></div>    
+            </div>        
+        </div>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li class="active"><a href="#">Order</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1 class="subheading">Your Order</h1>
+        <div class="order-info">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row">Total</th>
+                        <td id="total"></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <form action="thankyou-order.html" method="get">
+                <h3>Place your order</h3>
+                <p><span class="required">*</span> Indicates a required field.</p>
+
+                <label>Full name<span class="required">*</span>
+                    <input type="text" name="name" autocomplete="name" title="Enter your full name."
+                        required>
+                </label>
+
+                <label>Phone<span class="required">*</span>
+                    <input type="tel" name="phone" autocomplete="tel"
+                        title="Enter a phone number complete with area code." required>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <button type="submit" name="submit" value="submit">Order</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>©<span id="currentYear"></span> 🌷 Diane Lish | United States <br>
+        Last Modified <span id="lastModified"></span></p>
+
+        <div class="social-media">
+            <a href="https://www.youtube.com/"><img src="images/youtube-logo.svg" alt="Youtube logo" loading="lazy" width="20"
+                    height="20"></a>
+            <a href="https://x.com/"><img src="images/twitter-logo.svg" alt="Twitter logo" loading="lazy" width="20" height="20"></a>
+            <a href="https://www.facebook.com/"><img src="images/facebook.svg" alt="Facebook logo" loading="lazy" width="20"
+                    height="20"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

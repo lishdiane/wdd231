@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Place to Eat</title>
+    <meta name="description" content="A Place to Eat Restaurant">
+    <meta name="author" content="Diane Lish">
+
+    <meta property="og:title" content="A Place to Eat">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://lishdiane.github.io/wdd231/project/index.html">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Galada&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <script defer src="scripts/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.webp" alt="A Place to Eat logo" width="100" height="100">
+        <div id="menu-icons">
+            <a class="menu" href="#" aria-label="menu icon"></a>
+            <div>
+                <a class="shopping-bag menu" href="#" aria-label="shopping bag"><img src="images/bag.webp"
+                    alt="shopping bag icon" width="258" height="334"></a>
+                <div id="item-number"></div>    
+            </div>        
+        </div>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 600px)">
+                <img class="hero-img" src="images/hero.webp" alt="Cheeseburger and fries on a wooden platter."
+                    width="626" height="352">
+            </picture>
+
+            <div class="hero-card">
+                <h1>A Place to Eat</h1>
+                <a class="call-to-action" href="menu.html">Order Online</a>
+            </div>
+        </div>
+
+        <h2 class="subheading">Pull up a seat!</h2>
+
+        <section id="section-cards">
+            <div id="join">
+                <img src="images/join.webp" alt="" width="200" height="200">
+                <h3>Join our Good Eats club!</h3>
+                <p>Become a Good Eats club member to receive special discounts and be notified first of special offers
+                    and exclusive deals.</p>
+            </div>
+            <div id="specials">
+                <img src="images/special.webp" alt="" width="200" height="200">
+                <h3>Everyday Specials</h3>
+                <ul>
+                    <li>Lunch specials starting at $9.99</li>
+                    <li>Specialty drinks for only $3.99</li>
+                    <li>Early Bird discount from 3-5pm</li>
+                </ul>
+            </div>
+            <div id="order">
+                <img src="images/order.webp" alt="" width="200" height="200">
+                <h3>Order Online</h3>
+                <p>Order Online and pick up at one of locations. We also offer curbside pickup!</p>
+            </div>
+        </section>
+
+        <h2 class="subheading">Find something to eat!</h2>
+
+        <section id="menu-options">
+            <div>
+                <div class="item1">
+                    <h3>Appetizers</h3>
+                    <picture>
+                        <source srcset="images/appetizer-large.webp" width="450" height="338" media="(min-width: 715px)">
+                        <img class="hero-img" src="images/appetizer-small.webp" alt="Loaded french fries."
+                            width="626" height="352">
+                    </picture>
+                </div>
+
+                <div class="item2">
+                    <h3>Dinner Entrées</h3>
+                    <picture>
+                        <source srcset="images/dinner-large.webp" width="740" height="338" media="(min-width: 715px)">
+                        <img class="hero-img" src="images/dinner-small.webp" alt="Pasta in a wood bowl."
+                            width="626" height="352">
+                    </picture>
+                </div>
+            </div>
+            <div>
+                <div class="item3">
+                    <h3>Lunch Specials</h3>
+                    <picture>
+                        <source srcset="images/lunch-large.webp" width="640" height="338" media="(min-width: 715px)">
+                        <img class="hero-img" src="images/lunch-small.webp" alt="Sandwhich sliced in half."
+                            width="626" height="352">
+                    </picture>
+                </div>
+                <div class="item4">
+                    <h3>Sides</h3>
+                    <picture>
+                        <source srcset="images/sides-large.webp" width="550" height="338" media="(min-width: 715px)">
+                        <img class="hero-img" src="images/sides-small.webp" alt="Salad with tomatos and steak on a white plate."
+                            width="626" height="352">
+                    </picture>
+                </div>
+            </div>
+            <div>
+                <div class="item5">
+                    <h3>Drinks</h3>
+                    <picture>
+                        <source srcset="images/drinks-large.webp" width="550" height="338" media="(min-width: 715px)">
+                        <img class="hero-img" src="images/drinks-small.webp" alt="Orange drinks with mint and a straw."
+                            width="626" height="352">
+                    </picture>
+                </div>
+                <div class="item6">
+                    <h3>Desserts</h3>
+                    <picture>
+                        <source srcset="images/dessert-large.webp" width="640" height="338" media="(min-width: 715px)">
+                        <img class="hero-img" src="images/desserts-small.webp" alt="Ice cream and strawberry parfait."
+                            width="626" height="352">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <form action="thankyou.html" method="get">
+            <h3>Join our Good Eats Club</h3>
+            <h4>Get notified of exclusive deals and discounts.</h4>
+            <p><span class="required">*</span> Indicates a required field.</p>
+            <label>Your Name<span class="required">*</span><input type="text" name="name" autocomplete="name"
+                    title="Please enter your full name." required></label>
+            <label>Your Email<span class="required">*</span><input type="email" name="email" autocomplete="email"
+                    title="Please enter a valid email." placeholder="johndoe@email.com" required></label>
+            <button aria-label="sign up" type="submit" name="submit">Sign Up</button>
+        </form>
+
+    </main>
+    <footer>
+        <p>©<span id="currentYear"></span> 🌷 Diane Lish | United States <br>
+        Last Modified <span id="lastModified"></span></p>
+
+        <div class="social-media">
+            <a href="https://www.youtube.com/"><img src="images/youtube-logo.svg" alt="Youtube logo" width="30"
+                    height="30"></a>
+            <a href="https://x.com/"><img src="images/twitter-logo.svg" alt="Twitter logo" width="30" height="30"></a>
+            <a href="https://www.facebook.com/"><img src="images/facebook.svg" alt="Facebook logo" width="30"
+                    height="30"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
