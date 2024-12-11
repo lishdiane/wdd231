@@ -5,7 +5,7 @@ let formData = everything[1].split("&");
 const thankyou = document.querySelector("#thankyou");
 
 thankyou.innerHTML = `
-<p>Thank you for signing up for our newsletter! You will recieve an email soon.</p>
+<p>Thank you for signing up for our newsletter! You will receive an email soon.</p>
 <p><strong>Name:</strong> ${capitalize(show("name"))}</p>
 <p><strong>Your Email:</strong><a href="mailto:${show("email")}"> ${show("email")}</a></p>
 `
