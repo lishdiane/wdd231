@@ -1,22 +1,25 @@
+import { getTotalItems } from "../modules/total.js";
+
 // create menu
+
+const order = JSON.parse(localStorage.getItem("order")) || [];
+const itemNumber = document.querySelector("#item-number");
 
 getMenu();
 itemNumber.textContent = getTotalItems(order);
-// const appetizers = filterMenu(results, appetizers);
-// const entrees = filterMenu(results, entrees);
-// const lunch = filterMenu(results, lunch);
-// const sides = filterMenu(results, sides);
-// const drinks = filterMenu(results, drinks);
-// const desserts = filterMenu(results, desserts);
-
-
 
 async function getMenu() {
-    const response = await fetch("data/menu.json");
-    if(response.ok) {
-        const data = await response.json();
-        createMenuCards(data);
-    }
+    try {
+        const response = await fetch("data/menu.json");
+        if(response.ok) {
+            const data = await response.json();
+            createMenuCards(data);
+        }else {
+            throw Error(await response.text());
+        };
+    } catch (e) {
+       console.log(error);
+    };
 }
 
 function createMenuCards(menu) {
@@ -37,7 +40,6 @@ function createMenuCards(menu) {
             <p><strong>${item.name}</strong></p>
             <p>Price: $${item.price}</p>`;
         }
-
 
         const moreInfo = document.createElement("p");
         moreInfo.innerHTML = "Click here for more info!";
@@ -83,8 +85,4 @@ function displayItemDetails(item) {
         
     itemDetails.showModal();
     closeButton.addEventListener("click", () => itemDetails.close());
-}
-
-function filterMenu(menu, category) {
-    return menu.filter((item) => item.category == category)
 }

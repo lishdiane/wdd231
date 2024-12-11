@@ -23,8 +23,8 @@
         href="https://fonts.googleapis.com/css2?family=Galada&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap"
         rel="stylesheet">
 
-        <script defer src="scripts/script.js"></script>
-        <script defer src="scripts/menu.js"></script>
+        <script type="module" src="scripts/script.js"></script>
+        <script type="module" src="scripts/menu.js"></script>
 </head>
 
 <body id="menu-body">
@@ -33,7 +33,7 @@
         <div id="menu-icons">
             <a class="menu" href="#" aria-label="menu icon"></a>
             <div>
-                <a class="shopping-bag menu" href="#" aria-label="shopping bag"><img src="images/bag.webp"
+                <a class="shopping-bag menu" href="order.html" aria-label="shopping bag"><img src="images/bag.webp"
                     alt="shopping bag icon" width="258" height="334"></a>
                 <div id="item-number"></div>    
             </div>        
@@ -50,18 +50,6 @@
 
     <main>
         <h2 class="subheading">Menu</h2>
-        <div class="filter">
-            <label for="select">Filter</label>
-            <select id="select">
-                <option value="all">All</option>
-                <option value="appetizers">Appetizers</option>
-                <option value="entrees">Dinner Entrees</option>
-                <option value="lunch">Lunch Specials</option>
-                <option value="sides">Sides</option>
-                <option value="drinks">Drinks</option>
-                <option value="desserts">Desserts</option>
-            </select>
-        </div>
 
         <section id="food-menu-cards"></section>
         <dialog id="item-details"></dialog>

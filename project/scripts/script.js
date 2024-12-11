@@ -1,4 +1,4 @@
-
+import { getTotalItems } from "../modules/total.js";
 
 // ------ Year, and modification date-----//
 
@@ -26,14 +26,11 @@ const itemNumber = document.querySelector("#item-number");
 
 itemNumber.textContent = getTotalItems(order);
 
-function getTotalItems(array) {
-    const totalItems = array.reduce((pv, item) => {
-        return pv + item.quantity;
-    }, 0);
-    return totalItems;
-}
-
-
-
+// function getTotalItems(array) {
+//     const totalItems = array.reduce((pv, item) => {
+//         return pv + item.quantity;
+//     }, 0);
+//     return totalItems;
+// }
 
 

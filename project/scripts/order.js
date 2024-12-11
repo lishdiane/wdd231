@@ -1,4 +1,8 @@
+import { getTotalItems } from "../modules/total.js";
+
 // display order items
+const order = JSON.parse(localStorage.getItem("order")) || [];
+const itemNumber = document.querySelector("#item-number");
 
 displayOrder(order);
 

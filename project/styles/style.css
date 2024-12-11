@@ -175,6 +175,7 @@ section {
     gap: 1rem;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr 3fr;
+    align-items: center;
     padding: .5rem;
     margin: .5rem 0;
     box-shadow: 0 0 3px black;
@@ -443,3 +444,24 @@ footer.social-media a{
 }
 
 
+@media only screen and (max-width: 480px) {
+
+    #food-menu-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #section-cards div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
