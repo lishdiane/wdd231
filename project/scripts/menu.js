@@ -51,13 +51,23 @@ function createMenuCards(menu) {
         itemDiv.appendChild(button);
     
         button.addEventListener("click", () => {
-            if ("quantity" in item) {
-                item.quantity += 1;
-            } else {
-                item.quantity = 1;
-                order.push(item);
-            }
-            
+            // const inOrder = order.find((o) => o.name === item.name);
+            let inOrder = null;
+
+            if (order.length > 0) {
+                inOrder = order.find((o, i) => {
+                    if (o.name === item.name){
+                        order[i].quantity += 1;
+                        return true;
+                    }
+                });
+            };
+
+            if (inOrder === undefined|| inOrder === null) {
+            item.quantity = 1;
+            order.push(item);
+            };
+                
             localStorage.setItem("order", JSON.stringify(order));
 
             itemNumber.textContent = getTotalItems(order);
