@@ -93,3 +93,6 @@ function getTodaysDate() {
     console.log(today.toString());
     document.querySelector("#timestamp").value = today.toString();
 }
+
+const formButton = document.querySelector("#order-button");
+formButton.addEventListener("click", () => localStorage.removeItem("order"));
